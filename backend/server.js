@@ -28,7 +28,7 @@ const studentRoutes = require('./routes/Students');
 app.use('/students', studentRoutes);
 
 // Start the server
-const port = 3001;
+const port = 3100;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
