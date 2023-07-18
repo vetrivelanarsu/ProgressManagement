@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm i express mongoose cors",
+    "build": "npm i",
     "dev": "node server.js"
   },
   "keywords": [],
