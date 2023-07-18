@@ -1,0 +1,26 @@
+.navbar{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(68, 114, 103);
+    color: white;
+    margin-bottom: 50px;
+}
+
+
+.left{
+   padding-left: 30px;
+   font-size: xx-large;   
+}
+
+.right{
+    padding-right: 30px;
+    font-size: x-large;   
+ }
+ 
+ .center{
+    font-size:xx-large
+ }
