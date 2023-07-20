@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/vetriptoject', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://vetrivelanarasu:3Of2va3emhinNK8G@cluster1.deyusk9.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
   })

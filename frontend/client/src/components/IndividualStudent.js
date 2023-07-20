@@ -61,14 +61,14 @@ const IndividualStudent = () => {
   };
 
   const calculateTotal = (progress) => {
-    const spentSum = progress.reduce((acc, curr) => acc + parseFloat(curr.moneySpent), 0);
+    const spentSum = progress.reduce((acc, curr) => acc + parseInt(curr.moneySpent), 0);
     const updatedTotal = 2000 - spentSum;
     setTotal(updatedTotal);
   };
 
   const calculateNetProfitLoss = (progress) => {
-    const earnedSum = progress.reduce((acc, curr) => acc + parseFloat(curr.moneyEarned), 0);
-    const spentSum = progress.reduce((acc, curr) => acc + parseFloat(curr.moneySpent), 0);
+    const earnedSum = progress.reduce((acc, curr) => acc + parseInt(curr.moneyEarned), 0);
+    const spentSum = progress.reduce((acc, curr) => acc + parseInt(curr.moneySpent), 0);
     const updatedNetProfitLoss = earnedSum - spentSum;
     setNetProfitLoss(updatedNetProfitLoss);
   };
