@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3100';
+const API_BASE_URL = 'https://crud10-x8xl.onrender.com';
 
 // Get all students
 export const getStudents = async () => {
