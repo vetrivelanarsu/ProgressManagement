@@ -6,9 +6,8 @@ import {
   Grid,
   Paper,
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles(() => ({
+const styles = {
   formContainer: {
     padding: '16px',
     marginBottom: '16px',
@@ -22,10 +21,9 @@ const useStyles = makeStyles(() => ({
   formButton: {
     marginRight: '8px',
   },
-}));
+};
 
 const StudentForm = ({ onSubmit }) => {
-  const classes = useStyles();
   const [name, setName] = useState('');
   const [grade, setGrade] = useState('');
   const [avatar, setAvatar] = useState('');
@@ -74,8 +72,8 @@ const StudentForm = ({ onSubmit }) => {
   };
 
   return (
-    <Paper elevation={2} className={classes.formContainer}>
-      <Typography variant="h6" className={classes.formTitle}>
+    <Paper elevation={2} style={styles.formContainer}>
+      <Typography variant="h6" style={styles.formTitle}>
         Add Student
       </Typography>
       <form onSubmit={handleSubmit}>
@@ -87,7 +85,7 @@ const StudentForm = ({ onSubmit }) => {
               fullWidth
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={classes.formField}
+              style={styles.formField}
               required
             />
           </Grid>
@@ -98,7 +96,7 @@ const StudentForm = ({ onSubmit }) => {
               fullWidth
               value={grade}
               onChange={(e) => setGrade(e.target.value)}
-              className={classes.formField}
+              style={styles.formField}
               required
             />
           </Grid>
@@ -109,7 +107,7 @@ const StudentForm = ({ onSubmit }) => {
               fullWidth
               value={avatar}
               onChange={(e) => setAvatar(e.target.value)}
-              className={classes.formField}
+              style={styles.formField}
               required
             />
           </Grid>
@@ -120,7 +118,7 @@ const StudentForm = ({ onSubmit }) => {
               fullWidth
               value={business}
               onChange={(e) => setBusiness(e.target.value)}
-              className={classes.formField}
+              style={styles.formField}
               required
             />
           </Grid>
@@ -137,7 +135,7 @@ const StudentForm = ({ onSubmit }) => {
                     fullWidth
                     value={week.week}
                     onChange={(e) => handleProgressChange(index, 'week', e.target.value)}
-                    className={classes.formField}
+                    style={styles.formField}
                     required
                   />
                 </Grid>
@@ -148,7 +146,7 @@ const StudentForm = ({ onSubmit }) => {
                     fullWidth
                     value={week.moneySpent}
                     onChange={(e) => handleProgressChange(index, 'moneySpent', e.target.value)}
-                    className={classes.formField}
+                    style={styles.formField}
                     required
                   />
                 </Grid>
@@ -159,7 +157,7 @@ const StudentForm = ({ onSubmit }) => {
                     fullWidth
                     value={week.itemsSold}
                     onChange={(e) => handleProgressChange(index, 'itemsSold', e.target.value)}
-                    className={classes.formField}
+                    style={styles.formField}
                     required
                   />
                 </Grid>
@@ -170,7 +168,7 @@ const StudentForm = ({ onSubmit }) => {
                     fullWidth
                     value={week.moneyEarned}
                     onChange={(e) => handleProgressChange(index, 'moneyEarned', e.target.value)}
-                    className={classes.formField}
+                    style={styles.formField}
                     required
                   />
                 </Grid>
@@ -180,7 +178,7 @@ const StudentForm = ({ onSubmit }) => {
                     variant="outlined"
                     fullWidth
                     value={week.profitLoss}
-                    className={classes.formField}
+                    style={styles.formField}
                     disabled
                   />
                 </Grid>
@@ -208,7 +206,7 @@ const StudentForm = ({ onSubmit }) => {
               type="submit"
               variant="contained"
               color="primary"
-              className={classes.formButton}
+              style={styles.formButton}
             >
               Add Student
             </Button>
